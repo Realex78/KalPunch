@@ -6,7 +6,7 @@
 [node name="TestScene" type="Node2D"]
 
 [node name="TestPlayer" parent="." instance=ExtResource("1_c5kcj")]
-position = Vector2(577, 395)
+position = Vector2(242, 404)
 
-[node name="Sprite2D" parent="." instance=ExtResource("2_uv7he")]
-position = Vector2(571, 490)
+[node name="StaticBody2D" parent="." instance=ExtResource("2_uv7he")]
+position = Vector2(281, 462)
