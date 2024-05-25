@@ -6,3 +6,4 @@
 
 [node name="TestPlayer" parent="." instance=ExtResource("1_c5kcj")]
 position = Vector2(577, 395)
+jump_force = 700
