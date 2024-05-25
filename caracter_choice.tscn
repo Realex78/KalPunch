@@ -1,0 +1,65 @@
+[gd_scene load_steps=10 format=3 uid="uid://d2d67gbtoai2s"]
+
+[ext_resource type="Texture2D" uid="uid://cdmvt1k2gb2gl" path="res://Assets/Visuals/ControllerScreen/Background.png" id="1_e02y8"]
+[ext_resource type="Texture2D" uid="uid://cq037v5vuhucn" path="res://Assets/Visuals/ControllerScreen/DownLeftInactive.png" id="2_8r0xy"]
+[ext_resource type="Script" path="res://character_selection/char 1.gd" id="3_odqjg"]
+[ext_resource type="Texture2D" uid="uid://cu4f2sc1vwre3" path="res://Assets/Visuals/ControllerScreen/DownRightInactive.png" id="4_k32tw"]
+[ext_resource type="Script" path="res://character_selection/char 2.gd" id="5_gm63i"]
+[ext_resource type="Texture2D" uid="uid://cujijo6x8up8o" path="res://Assets/Visuals/ControllerScreen/UpLeftInactive.png" id="6_dhv2s"]
+[ext_resource type="Script" path="res://character_selection/char 3.gd" id="7_8gxo8"]
+[ext_resource type="Texture2D" uid="uid://dsk0ekvgsoc8j" path="res://Assets/Visuals/ControllerScreen/UpRightInactive.png" id="8_px8ax"]
+[ext_resource type="Script" path="res://character_selection/char 4.gd" id="9_muhtc"]
+
+[node name="caracter_choice" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_e02y8")
+
+[node name="char 1" type="TextureButton" parent="TextureRect"]
+layout_mode = 0
+offset_left = -146.0
+offset_top = 13.0
+offset_right = 3694.0
+offset_bottom = 2173.0
+texture_normal = ExtResource("2_8r0xy")
+script = ExtResource("3_odqjg")
+
+[node name="char 2" type="TextureButton" parent="TextureRect"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 34.0
+offset_right = 3885.0
+offset_bottom = 2194.0
+texture_normal = ExtResource("4_k32tw")
+script = ExtResource("5_gm63i")
+metadata/_edit_lock_ = true
+
+[node name="char 3" type="TextureButton" parent="TextureRect"]
+layout_mode = 0
+offset_left = -161.0
+offset_top = 13.0
+offset_right = 3679.0
+offset_bottom = 2173.0
+texture_normal = ExtResource("6_dhv2s")
+script = ExtResource("7_8gxo8")
+
+[node name="char 4" type="TextureButton" parent="TextureRect"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 17.0
+offset_right = 3877.0
+offset_bottom = 2177.0
+texture_normal = ExtResource("8_px8ax")
+script = ExtResource("9_muhtc")
+
+[connection signal="mouse_exited" from="." to="TextureRect/char 1" method="_on_control_mouse_exited"]
+[connection signal="mouse_entered" from="TextureRect/char 1" to="TextureRect/char 1" method="_on_mouse_entered"]
