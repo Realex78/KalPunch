@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bj0ak8qc2l7ss"]
+[gd_scene load_steps=25 format=3 uid="uid://bj0ak8qc2l7ss"]
 
 [ext_resource type="Texture2D" uid="uid://bmni20nlhnvcf" path="res://stickman_idle.png" id="1_nm30d"]
 [ext_resource type="Script" path="res://player_2.gd" id="1_p5e3s"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://djtlsc3y3k8ch" path="res://Assets/Visuals/BabyGreen/Landing.png" id="8_fdio0"]
 [ext_resource type="Texture2D" uid="uid://b45f1px0ltstq" path="res://Assets/Visuals/BabyGreen/PunchExecution.png" id="10_r3vws"]
 [ext_resource type="Texture2D" uid="uid://cp7dy33n6f5ua" path="res://Assets/Visuals/BabyGreen/Run1.png" id="12_hb70d"]
+[ext_resource type="Texture2D" uid="uid://bhp56f6pwsxmr" path="res://Assets/Visuals/BabyGreen/Hit.png" id="12_ogd6b"]
 [ext_resource type="Texture2D" uid="uid://b7u3sxa6tvqpk" path="res://Assets/Visuals/BabyGreen/Run2.png" id="13_t8pl5"]
 [ext_resource type="Texture2D" uid="uid://cbayoka7002yu" path="res://Assets/Visuals/BabyGreen/Run3.png" id="14_6bhhv"]
 [ext_resource type="Texture2D" uid="uid://kbdojbnhf4as" path="res://Assets/Visuals/BabyGreen/Run4.png" id="15_rqbjh"]
@@ -111,6 +112,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("12_ogd6b")
+}],
+"loop": true,
+"name": &"smack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("12_hb70d")
 }, {
 "duration": 1.0,
@@ -164,4 +173,4 @@ shape = SubResource("RectangleShape2D_0ajgd")
 [node name="PlayerAnimatedSprite" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_10cyx")
-animation = &"walk"
+animation = &"smack"
