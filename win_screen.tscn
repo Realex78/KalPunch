@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cdmvt1k2gb2gl" path="res://Assets/Visuals/ControllerScreen/Background.png" id="1_l1m38"]
 [ext_resource type="Script" path="res://win_screen.gd" id="1_r4daw"]
-[ext_resource type="FontFile" uid="uid://csnf1piqj4r8l" path="res://Assets/Visuals/TitleScreen/Supersonic Rocketship.ttf" id="3_3w4s1"]
+[ext_resource type="FontFile" uid="uid://c40ufl6eykqm" path="res://Assets/Visuals/TitleScreen/Supersonic Rocketship.ttf" id="3_3w4s1"]
 [ext_resource type="Texture2D" uid="uid://bswbcngcsaf2d" path="res://Assets/Visuals/ControllerScreen/DownLeftActive.png" id="9_5ha14"]
 [ext_resource type="AudioStream" uid="uid://btf46ebq5o27r" path="res://Assets/Music/TitleScreen.mp3" id="12_rctuk"]
 [ext_resource type="Texture2D" uid="uid://ckn4qrojkkd4u" path="res://Assets/Visuals/PausedScreen/BackButtonInactive.PNG" id="15_af8c1"]
@@ -36,7 +36,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer2"]
-position = Vector2(954, 629)
+position = Vector2(1669, 239)
 scale = Vector2(0.749545, 0.756068)
 texture = ExtResource("9_5ha14")
 
