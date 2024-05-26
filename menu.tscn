@@ -84,5 +84,7 @@ stretch_mode = 5
 [node name="AudioStreamPlayer2D" parent="." instance=ExtResource("9_g11wr")]
 position = Vector2(477, 1323)
 autoplay = true
+bus = &"Music"
 
+[connection signal="pressed" from="HBoxContainer/options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="HBoxContainer/quit" to="." method="_on_quit_pressed"]
