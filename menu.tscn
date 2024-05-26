@@ -81,4 +81,5 @@ ignore_texture_size = true
 stretch_mode = 5
 
 [connection signal="pressed" from="HBoxContainer/options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="HBoxContainer/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="HBoxContainer/quit" to="." method="_on_quit_pressed"]
