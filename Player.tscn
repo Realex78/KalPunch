@@ -47,18 +47,6 @@ animations = [{
 "loop": true,
 "name": &"punch",
 "texture": ExtResource("5_j56fo")
-}],
-"loop": true,
-"name": &"landing",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_7f2l6")
-}],
-"loop": true,
-"name": &"walk",
-"speed": 5.0
 }]
 
 [node name="Player" type="CharacterBody2D"]
