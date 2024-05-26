@@ -8,12 +8,11 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$PlayerAnimatedSprite.animation = "idle"
+	$PlayerAnimatedSprite.flip_v = false
 
 
 func _physics_process(delta):
-	# Add the gravity.
-	velocity.y += gravity * delta
-
+	# Puro input alv
 	# Handle Jump.
 	if Input.is_action_pressed("jump") and is_on_floor():
 		jump_acum += min(delta * jump_speed, -100)
@@ -21,16 +20,19 @@ func _physics_process(delta):
 	if Input.is_action_just_released("jump") and is_on_floor():
 		velocity.y = max(jump_acum, -1001)
 		jump_acum = 0
+	else:
+		# Add the gravity.
+		velocity.y += gravity * delta
 	
 	# Get the input direction.
 	var direction = Input.get_axis("move_left", "move_right")
 	velocity.x = direction * speed
 	
+	# Editar animaciones
 	$PlayerAnimatedSprite.flip_h = velocity.x < 0
 	if is_on_floor():
 		if velocity.x != 0:
 			$PlayerAnimatedSprite.animation = "walk"
-			$PlayerAnimatedSprite.flip_v = false
 		else:
 			$PlayerAnimatedSprite.animation = "idle"
 	else:
