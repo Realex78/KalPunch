@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://obnmmeov74"]
 
 [ext_resource type="Texture2D" uid="uid://bbd4v22eoct1l" path="res://Assets/Visuals/Level/Background.PNG" id="1_f2uuw"]
-[ext_resource type="PackedScene" path="res://Platform1.tscn" id="2_upe02"]
-[ext_resource type="PackedScene" path="res://platform2.tscn" id="3_hs4um"]
+[ext_resource type="PackedScene" uid="uid://dq6g5xrbmwlih" path="res://Platform1.tscn" id="2_upe02"]
+[ext_resource type="PackedScene" uid="uid://bvwwstygvhe3n" path="res://platform2.tscn" id="3_hs4um"]
 
 [node name="Background" type="Sprite2D"]
 position = Vector2(963.5, 540.5)
