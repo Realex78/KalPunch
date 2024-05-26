@@ -1,12 +1,25 @@
-[gd_scene load_steps=11 format=3 uid="uid://bj0ak8qc2l7ss"]
+[gd_scene load_steps=24 format=3 uid="uid://bj0ak8qc2l7ss"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_6sk4a"]
 [ext_resource type="Texture2D" uid="uid://bmni20nlhnvcf" path="res://stickman_idle.png" id="1_nm30d"]
+[ext_resource type="Script" path="res://player_2.gd" id="1_p5e3s"]
+[ext_resource type="Texture2D" uid="uid://ddw2ba4c1no7x" path="res://Assets/Visuals/BabyGreen/JumpDown.png" id="2_vv45m"]
 [ext_resource type="Texture2D" uid="uid://bew3cyd4f4mu0" path="res://stickman_falling.png" id="2_y71oc"]
 [ext_resource type="Texture2D" uid="uid://c85kpv1slfuyl" path="res://stickman_jump.png" id="3_wxkg2"]
+[ext_resource type="Texture2D" uid="uid://ddvmc8nmut20l" path="res://Assets/Visuals/BabyGreen/Static.png" id="4_d3qoj"]
 [ext_resource type="Texture2D" uid="uid://blpspss5jsr74" path="res://stickman_landing.png" id="5_j56fo"]
 [ext_resource type="Texture2D" uid="uid://vysmfkhmn6t7" path="res://Screenshot 2024-05-26 at 12.27.03.png" id="5_wmjcc"]
+[ext_resource type="Texture2D" uid="uid://cp5s0wj3hyptt" path="res://Assets/Visuals/BabyGreen/JumpUp.png" id="6_x3wpl"]
 [ext_resource type="Texture2D" uid="uid://cq1pdi868xjc8" path="res://stickman_right.png" id="7_4e75n"]
+[ext_resource type="Texture2D" uid="uid://djtlsc3y3k8ch" path="res://Assets/Visuals/BabyGreen/Landing.png" id="8_fdio0"]
+[ext_resource type="Texture2D" uid="uid://b45f1px0ltstq" path="res://Assets/Visuals/BabyGreen/PunchExecution.png" id="10_r3vws"]
+[ext_resource type="Texture2D" uid="uid://cp7dy33n6f5ua" path="res://Assets/Visuals/BabyGreen/Run1.png" id="12_hb70d"]
+[ext_resource type="Texture2D" uid="uid://b7u3sxa6tvqpk" path="res://Assets/Visuals/BabyGreen/Run2.png" id="13_t8pl5"]
+[ext_resource type="Texture2D" uid="uid://cbayoka7002yu" path="res://Assets/Visuals/BabyGreen/Run3.png" id="14_6bhhv"]
+[ext_resource type="Texture2D" uid="uid://kbdojbnhf4as" path="res://Assets/Visuals/BabyGreen/Run4.png" id="15_rqbjh"]
+[ext_resource type="Texture2D" uid="uid://clwucl6fcpdnb" path="res://Assets/Visuals/BabyGreen/Run5.png" id="16_8o8wi"]
+[ext_resource type="Texture2D" uid="uid://bnxy53fibdfgm" path="res://Assets/Visuals/BabyGreen/Run6.png" id="17_kl7ys"]
+[ext_resource type="Texture2D" uid="uid://bfe1jatqdqgpi" path="res://Assets/Visuals/BabyGreen/Run7.png" id="18_xwjyw"]
+[ext_resource type="Texture2D" uid="uid://cvw5cpfkwxwna" path="res://Assets/Visuals/BabyGreen/Run8.png" id="19_h0lf4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2nlfe"]
 radius = 600.0
@@ -18,7 +31,7 @@ size = Vector2(308, 515)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_y71oc")
+"texture": ExtResource("2_vv45m")
 }],
 "loop": true,
 "name": &"falling",
@@ -26,7 +39,15 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_nm30d")
+"texture": ExtResource("2_y71oc")
+}],
+"loop": true,
+"name": &"falling_stickman",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_d3qoj")
 }],
 "loop": true,
 "name": &"idle",
@@ -34,7 +55,15 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_wxkg2")
+"texture": ExtResource("1_nm30d")
+}],
+"loop": true,
+"name": &"idle_stickman",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_x3wpl")
 }],
 "loop": true,
 "name": &"jump",
@@ -42,7 +71,15 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_j56fo")
+"texture": ExtResource("3_wxkg2")
+}],
+"loop": true,
+"name": &"jump_stickman",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_fdio0")
 }],
 "loop": true,
 "name": &"landing",
@@ -50,7 +87,15 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_wmjcc")
+"texture": ExtResource("5_j56fo")
+}],
+"loop": true,
+"name": &"landing_stickman",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_r3vws")
 }],
 "loop": true,
 "name": &"punch",
@@ -58,16 +103,53 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("7_4e75n")
+"texture": ExtResource("5_wmjcc")
+}],
+"loop": true,
+"name": &"punch_stickman",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_hb70d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_t8pl5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_6bhhv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_rqbjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_8o8wi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_kl7ys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_xwjyw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_h0lf4")
 }],
 "loop": true,
 "name": &"walk",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_4e75n")
+}],
+"loop": true,
+"name": &"walk_stickman",
 "speed": 5.0
 }]
 
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(582, 348)
-script = ExtResource("1_6sk4a")
+script = ExtResource("1_p5e3s")
 
 [node name="PlayerHitRadis" type="Area2D" parent="."]
 
@@ -75,9 +157,11 @@ script = ExtResource("1_6sk4a")
 shape = SubResource("CircleShape2D_2nlfe")
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="."]
-position = Vector2(2, -3.5)
+position = Vector2(0, 25)
+scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_0ajgd")
 
 [node name="PlayerAnimatedSprite" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_10cyx")
-animation = &"punch"
+animation = &"walk"
