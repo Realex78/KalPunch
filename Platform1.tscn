@@ -3,15 +3,15 @@
 [ext_resource type="Texture2D" uid="uid://cxmq0sbmrv04i" path="res://Assets/Visuals/Level/Platform1.PNG" id="1_manv6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ocqhg"]
-size = Vector2(1397, 228.5)
+size = Vector2(1225, 119)
 
 [node name="StaticBody2D" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-15.9999, 7.99998)
-scale = Vector2(0.65549, 0.710465)
+position = Vector2(2.00001, 7.99998)
+scale = Vector2(0.615256, 0.710465)
 texture = ExtResource("1_manv6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-20.5, 31.75)
+position = Vector2(24.5, 68.5)
 shape = SubResource("RectangleShape2D_ocqhg")
