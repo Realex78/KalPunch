@@ -41,7 +41,7 @@ offset_bottom = 833.0
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_7y4p4")
 theme_override_font_sizes/font_size = 150
-text = "Master control"
+text = "Master Control"
 
 [node name="Master" type="HSlider" parent="VBoxContainer"]
 layout_mode = 2
@@ -87,10 +87,12 @@ scale = Vector2(0.498958, 0.5)
 texture = ExtResource("4_15o2r")
 
 [node name="Button" type="Button" parent="."]
-offset_left = 1611.0
-offset_top = 808.0
-offset_right = 1814.0
-offset_bottom = 929.0
+offset_left = 1668.0
+offset_top = 839.0
+offset_right = 1871.0
+offset_bottom = 960.0
+theme_override_colors/font_color = Color(1, 0, 0.356863, 1)
+theme_override_colors/font_hover_color = Color(0, 1, 0.701961, 1)
 theme_override_fonts/font = ExtResource("1_7y4p4")
 theme_override_font_sizes/font_size = 200
 text = "Menu"
