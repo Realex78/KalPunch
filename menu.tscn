@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://qaggfe74t0y6"]
+[gd_scene load_steps=10 format=3 uid="uid://buhetnguqujb4"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_42285"]
 [ext_resource type="Texture2D" uid="uid://dt7pfku5vpr61" path="res://Assets/Visuals/TitleScreen/TitleScreenBackdrop.png" id="1_jvlcx"]
@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://xcv8b2tlge0j" path="res://Assets/Visuals/TitleScreen/OptionsButtonActive.PNG" id="5_tp7xo"]
 [ext_resource type="Texture2D" uid="uid://cawla7j86um6j" path="res://Assets/Visuals/TitleScreen/QuitButtonInactive.PNG" id="7_4vtcw"]
 [ext_resource type="Texture2D" uid="uid://dm0ffb821qaue" path="res://Assets/Visuals/TitleScreen/QuitButtonActive.PNG" id="7_xaf7c"]
-[ext_resource type="PackedScene" uid="uid://ctawqb2ilp44o" path="res://TitleScreenMusic.tscn" id="9_g11wr"]
+[ext_resource type="PackedScene" uid="uid://cp4u66pmnkr10" path="res://TitleScreenMusic.tscn" id="9_g11wr"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
