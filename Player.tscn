@@ -160,7 +160,7 @@ animations = [{
 position = Vector2(582, 348)
 script = ExtResource("1_7w55b")
 
-[node name="PlayerHitRadis" type="Area2D" parent="." groups=["player"]]
+[node name="PlayerHitRadis" type="Area2D" parent="."]
 
 [node name="PlayerHitRadiusCollision" type="CollisionShape2D" parent="PlayerHitRadis"]
 shape = SubResource("CircleShape2D_2nlfe")
@@ -174,5 +174,3 @@ shape = SubResource("RectangleShape2D_0ajgd")
 scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_10cyx")
 animation = &"smack"
-
-[connection signal="area_entered" from="PlayerHitRadis" to="." method="_on_player_hit_radis_area_entered"]
