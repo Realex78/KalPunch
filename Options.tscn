@@ -94,6 +94,6 @@ theme_override_colors/font_color = Color(1, 0, 0.356863, 1)
 theme_override_colors/font_hover_color = Color(0, 1, 0.701961, 1)
 theme_override_fonts/font = ExtResource("1_7y4p4")
 theme_override_font_sizes/font_size = 200
-text = "Menu"
+text = "Back"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
