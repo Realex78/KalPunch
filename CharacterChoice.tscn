@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://b34qex4bw8is2"]
 
 [ext_resource type="Texture2D" uid="uid://cdmvt1k2gb2gl" path="res://Assets/Visuals/ControllerScreen/Background.png" id="1_0swhq"]
-[ext_resource type="FontFile" uid="uid://csnf1piqj4r8l" path="res://Assets/Visuals/TitleScreen/Supersonic Rocketship.ttf" id="2_exb8u"]
+[ext_resource type="FontFile" path="res://Assets/Visuals/TitleScreen/Supersonic Rocketship.ttf" id="2_exb8u"]
 [ext_resource type="Texture2D" uid="uid://cq037v5vuhucn" path="res://Assets/Visuals/ControllerScreen/DownLeftInactive.png" id="3_ys6rc"]
 [ext_resource type="Texture2D" uid="uid://bswbcngcsaf2d" path="res://Assets/Visuals/ControllerScreen/DownLeftActive.png" id="4_iatns"]
 [ext_resource type="Texture2D" uid="uid://cu4f2sc1vwre3" path="res://Assets/Visuals/ControllerScreen/DownRightInactive.png" id="5_x5e73"]
