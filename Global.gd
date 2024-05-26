@@ -1,5 +1,31 @@
 extends Node
 
+var music_player: AudioStreamPlayer = AudioStreamPlayer.new()
+var music_file = "res://Assets/Music/TitleScreen.mp3"
+
+func _ready():
+	if not has_node("MusicPlayer"):
+		add_child(music_player)
+		music_player.name = "MusicPlayer"
+		
+		var file = FileAccess.open(music_file, FileAccess.READ)
+		if file:
+			var music = load(music_file)
+			if music is AudioStream:
+				music_player.stream = music
+				if not music_player.playing:
+					music_player.play()
+	elif not music_player.playing:
+		music_player.play()
+
+func play_music():
+	if not music_player.playing:
+		music_player.play()
+
+func stop_music():
+	if music_player.playing:
+		music_player.stop()
+
 var player_1_name="Jugador 1";
 var player_1_score=10;
 

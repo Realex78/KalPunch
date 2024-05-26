@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://win_screen.gd" id="1_r4daw"]
 [ext_resource type="Script" path="res://Dummy_1.gd" id="2_b21hv"]
 [ext_resource type="Script" path="res://Dummy_2.gd" id="3_ak02c"]
-[ext_resource type="FontFile" uid="uid://jdhlexnkclo2" path="res://Assets/Visuals/TitleScreen/game_over.ttf" id="3_vfobd"]
+[ext_resource type="FontFile" uid="uid://or3htumpegrb" path="res://Assets/Visuals/TitleScreen/game_over.ttf" id="3_vfobd"]
 [ext_resource type="Script" path="res://Dummy_3.gd" id="4_smm3m"]
 [ext_resource type="Script" path="res://Dummy_4.gd" id="5_s5rxs"]
 [ext_resource type="Script" path="res://Leaderboard.gd" id="6_5t75m"]
@@ -12,7 +12,7 @@
 [ext_resource type="Script" path="res://Second_leaderboard.gd" id="8_hioqw"]
 [ext_resource type="Script" path="res://Third_leaderboard.gd" id="9_2r88c"]
 [ext_resource type="Script" path="res://Fourth_leaderboard.gd" id="10_barfa"]
-[ext_resource type="AudioStream" uid="uid://bo1nqlqpo488" path="res://Assets/Music/TitleScreen.mp3" id="12_rctuk"]
+[ext_resource type="AudioStream" uid="uid://btf46ebq5o27r" path="res://Assets/Music/TitleScreen.mp3" id="12_rctuk"]
 
 [node name="Win_screen" type="Node2D"]
 script = ExtResource("1_r4daw")
