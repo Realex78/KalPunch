@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctawqb2ilp44o"]
+
+[ext_resource type="AudioStream" uid="uid://btf46ebq5o27r" path="res://Assets/Music/TitleScreen.mp3" id="1_2yodq"]
+[ext_resource type="Script" path="res://TitleScreenMusic.gd" id="2_xlqx7"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_2yodq")
+script = ExtResource("2_xlqx7")
