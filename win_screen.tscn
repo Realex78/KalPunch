@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://o3xey3icx5ic"]
+[gd_scene load_steps=8 format=3 uid="uid://6h4eutwucqpx"]
 
 [ext_resource type="Texture2D" uid="uid://cdmvt1k2gb2gl" path="res://Assets/Visuals/ControllerScreen/Background.png" id="1_l1m38"]
 [ext_resource type="Script" path="res://win_screen.gd" id="1_r4daw"]
