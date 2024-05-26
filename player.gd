@@ -4,6 +4,8 @@ extends CharacterBody2D
 var jump_speed = -5000
 var jump_acum = 0
 var last_velocity_y = 0
+var PLAYER_ID = 0
+var last_pressed_jump = true
 # Time since landing initialized to inifity for comparison purposes
 var time_since_landing = INF
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -18,10 +20,12 @@ func _ready():
 func _physics_process(delta):
 	# Puro input alv
 	# Handle Jump.
-	if Input.is_action_pressed("jump") and is_on_floor() and isattacking==false:
+	var pressed_jump = (Input.is_joy_button_pressed(PLAYER_ID, JOY_BUTTON_A) or Input.is_joy_button_pressed(PLAYER_ID, JOY_BUTTON_DPAD_UP))
+	if pressed_jump and is_on_floor() and isattacking==false:
 		jump_acum += min(delta * jump_speed, -100)
+		
 
-	if Input.is_action_just_released("jump") and is_on_floor() and isattacking==false:
+	if last_pressed_jump and !pressed_jump and is_on_floor() and isattacking==false:
 		velocity.y = max(jump_acum, -1001)
 		jump_acum = 0
 	else:
@@ -29,13 +33,17 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 	
 	# Get the input direction.
-	var direction = Input.get_axis("move_left", "move_right")
-	velocity.x = direction * speed
+	var direction = Input.get_joy_axis(PLAYER_ID, JOY_AXIS_LEFT_X)
+	if direction < 0.1 and direction > -0.1:
+		velocity.x = 0
+	else:
+		velocity.x = direction * speed
 	
 	# Editar animaciones
 	$PlayerAnimatedSprite.flip_h = velocity.x < 0
 	if is_on_floor():
-		if Input.is_action_pressed("punch"):
+		isattacking=false
+		if Input.get_joy_axis(PLAYER_ID, JOY_AXIS_TRIGGER_RIGHT) > 0.25:
 			$PlayerAnimatedSprite.animation = "punch"
 			isattacking=true
 		elif last_velocity_y > velocity.y:
@@ -55,6 +63,7 @@ func _physics_process(delta):
 		
 
 	last_velocity_y = velocity.y
+	last_pressed_jump = pressed_jump
 
 	move_and_slide()
 	
