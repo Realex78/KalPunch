@@ -7,8 +7,20 @@
 [ext_resource type="Texture2D" uid="uid://dt7pfku5vpr61" path="res://Assets/Visuals/TitleScreen/TitleScreenBackdrop.png" id="4_15o2r"]
 
 [node name="Settings" type="Node2D"]
-position = Vector2(50, 100)
+position = Vector2(-32, 63)
 script = ExtResource("1_sb37e")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(1920, 1080)
+offset_left = 32.0
+offset_top = -63.0
+offset_right = 1952.0
+offset_bottom = 1017.0
+mouse_filter = 2
+texture = ExtResource("4_15o2r")
+expand_mode = 1
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
 
 [node name="Label2" type="Label" parent="."]
 offset_left = 100.0
@@ -68,6 +80,7 @@ script = ExtResource("1_6v770")
 bus_name = "SFX"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 show_behind_parent = true
 position = Vector2(909, 440)
 scale = Vector2(0.498958, 0.5)
