@@ -10,6 +10,7 @@ var last_pressed_jump = true
 var time_since_landing = INF
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var isattacking= false;
+var damaged=0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -67,45 +68,7 @@ func _physics_process(delta):
 
 	move_and_slide()
 	
-	#
-	#if !is_on_floor():
-		#velocity.y += gravity
-		#if velocity.y > 100:
-			#velocity.y = 100
-	#
-	#if Input.is_action_pressed("move_right"):
-		#velocity.x += 1
-	#if Input.is_action_pressed("move_left"):
-		#velocity.x -= 1
-	#
-	#if velocity.length() > 0:
-		#velocity = velocity.normalized() * speed
-		#if velocity.x != 0:
-			#$PlayerAnimatedSprite.animation = "walk"
-			#$PlayerAnimatedSprite.flip_v = false
-			## See the note below about boolean assignment.
-			#$PlayerAnimatedSprite.flip_h = velocity.x < 0
-	#else:
-		#$PlayerAnimatedSprite.animation = "idle"
-	#
-	#move_and_slide()
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-	#var velocity = Vector2.ZERO # The player's movement vector.
-	#
-#
-	#if velocity.length() > 0:
-		#velocity = velocity.normalized() * speed
-		#if velocity.x != 0:
-			#$PlayerAnimatedSprite.animation = "walk"
-			#$PlayerAnimatedSprite.flip_v = false
-			## See the note below about boolean assignment.
-			#$PlayerAnimatedSprite.flip_h = velocity.x < 0
-	#else:
-		#$PlayerAnimatedSprite.animation = "idle"
-		#
-	#position += velocity * delta
-	#position = position.clamp(Vector2.ZERO, screen_size)
-	
+func _on_PlayerHitRadiusCollision(area):
+	if area.is_in_group("punch"):
+		damaged=damaged+1
+		$PlayerAnimatedSprite.animation="smack"
