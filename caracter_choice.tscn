@@ -1,0 +1,139 @@
+[gd_scene load_steps=13 format=3 uid="uid://b34qex4bw8is2"]
+
+[ext_resource type="Texture2D" uid="uid://cdmvt1k2gb2gl" path="res://Assets/Visuals/ControllerScreen/Background.png" id="1_e02y8"]
+[ext_resource type="Texture2D" uid="uid://cq037v5vuhucn" path="res://Assets/Visuals/ControllerScreen/DownLeftInactive.png" id="2_8r0xy"]
+[ext_resource type="FontFile" uid="uid://csnf1piqj4r8l" path="res://Assets/Visuals/TitleScreen/Supersonic Rocketship.ttf" id="2_vigrp"]
+[ext_resource type="Texture2D" uid="uid://bswbcngcsaf2d" path="res://Assets/Visuals/ControllerScreen/DownLeftActive.png" id="4_67xlj"]
+[ext_resource type="Texture2D" uid="uid://c066au6yy835q" path="res://Assets/Visuals/ControllerScreen/DownRightActive.png" id="4_aa603"]
+[ext_resource type="Texture2D" uid="uid://cu4f2sc1vwre3" path="res://Assets/Visuals/ControllerScreen/DownRightInactive.png" id="4_k32tw"]
+[ext_resource type="Texture2D" uid="uid://cujijo6x8up8o" path="res://Assets/Visuals/ControllerScreen/UpLeftInactive.png" id="6_dhv2s"]
+[ext_resource type="Texture2D" uid="uid://blvy3lx37kjmq" path="res://Assets/Visuals/TitleScreen/StartButtonInactive.PNG" id="6_r0144"]
+[ext_resource type="Texture2D" uid="uid://vcd027agg5pf" path="res://Assets/Visuals/TitleScreen/StartButtonActive.png" id="7_m6022"]
+[ext_resource type="Texture2D" uid="uid://dsk0ekvgsoc8j" path="res://Assets/Visuals/ControllerScreen/UpRightInactive.png" id="8_px8ax"]
+[ext_resource type="Texture2D" uid="uid://c0l2cqgc6uyjq" path="res://Assets/Visuals/ControllerScreen/UpLeftActive.png" id="10_14gio"]
+[ext_resource type="Texture2D" uid="uid://c8vmtek0xbusd" path="res://Assets/Visuals/ControllerScreen/UpRightActive.png" id="12_hx5rx"]
+
+[node name="caracter_choice" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+custom_minimum_size = Vector2(1920, 1080)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 10.0
+offset_right = 24.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_e02y8")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer2"]
+clip_contents = false
+custom_minimum_size = Vector2(0, 100)
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 100.0
+offset_top = 70.0
+offset_right = 100.0
+offset_bottom = 170.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("2_vigrp")
+theme_override_font_sizes/normal_font_size = 100
+text = "Choose your color!"
+fit_content = true
+scroll_active = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer2"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -579.0
+offset_top = -429.0
+offset_right = 579.0
+offset_bottom = 571.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer2/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="char 1" type="TextureButton" parent="CanvasLayer2/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(350, 350)
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("2_8r0xy")
+texture_pressed = ExtResource("4_67xlj")
+texture_hover = ExtResource("4_67xlj")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="spacer" type="Control" parent="CanvasLayer2/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+
+[node name="char 2" type="TextureButton" parent="CanvasLayer2/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(350, 350)
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("4_k32tw")
+texture_pressed = ExtResource("4_aa603")
+texture_hover = ExtResource("4_aa603")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="CanvasLayer2/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer2/HBoxContainer/VBoxContainer3"]
+custom_minimum_size = Vector2(450, 450)
+layout_mode = 2
+texture_normal = ExtResource("6_r0144")
+texture_hover = ExtResource("7_m6022")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer2/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="char 3" type="TextureButton" parent="CanvasLayer2/HBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(350, 350)
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("6_dhv2s")
+texture_pressed = ExtResource("10_14gio")
+texture_hover = ExtResource("10_14gio")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="spacer2" type="Control" parent="CanvasLayer2/HBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+
+[node name="char 4" type="TextureButton" parent="CanvasLayer2/HBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("8_px8ax")
+texture_pressed = ExtResource("12_hx5rx")
+texture_hover = ExtResource("12_hx5rx")
+ignore_texture_size = true
+stretch_mode = 5
