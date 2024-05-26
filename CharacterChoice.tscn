@@ -1,36 +1,17 @@
-[gd_scene load_steps=14 format=3 uid="uid://b34qex4bw8is2"]
+[gd_scene load_steps=13 format=3 uid="uid://b34qex4bw8is2"]
 
-[ext_resource type="FontFile" uid="uid://c40ufl6eykqm" path="res://Assets/Visuals/TitleScreen/Supersonic Rocketship.ttf" id="2_exb8u"]
-[ext_resource type="Script" path="res://scripts/tolevel.gd" id="4_86n2h"]
+[ext_resource type="Texture2D" uid="uid://cdmvt1k2gb2gl" path="res://Assets/Visuals/ControllerScreen/Background.png" id="1_0swhq"]
+[ext_resource type="FontFile" path="res://Assets/Visuals/TitleScreen/Supersonic Rocketship.ttf" id="2_exb8u"]
+[ext_resource type="Texture2D" uid="uid://cq037v5vuhucn" path="res://Assets/Visuals/ControllerScreen/DownLeftInactive.png" id="3_ys6rc"]
+[ext_resource type="Texture2D" uid="uid://bswbcngcsaf2d" path="res://Assets/Visuals/ControllerScreen/DownLeftActive.png" id="4_iatns"]
+[ext_resource type="Texture2D" uid="uid://cu4f2sc1vwre3" path="res://Assets/Visuals/ControllerScreen/DownRightInactive.png" id="5_x5e73"]
+[ext_resource type="Texture2D" uid="uid://c066au6yy835q" path="res://Assets/Visuals/ControllerScreen/DownRightActive.png" id="6_6d2kg"]
 [ext_resource type="Texture2D" uid="uid://blvy3lx37kjmq" path="res://Assets/Visuals/TitleScreen/StartButtonInactive.PNG" id="7_dqwpr"]
 [ext_resource type="Texture2D" uid="uid://vcd027agg5pf" path="res://Assets/Visuals/TitleScreen/StartButtonActive.png" id="8_8f7w1"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7p7kb"]
-load_path = "res://.godot/imported/Background.png-9db14f5ab04d2806bba1e142dd8c42e1.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2vypp"]
-load_path = "res://.godot/imported/DownLeftInactive.png-e6cde5dd5b12cdb2245f710c72b45289.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ngvch"]
-load_path = "res://.godot/imported/DownLeftActive.png-14cee5aca3bd6a7d7eed2f14f105bbf7.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tnaq2"]
-load_path = "res://.godot/imported/DownRightInactive.png-e5d82b4ed9cd4eb1ce75ebacf1eac89d.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_075b1"]
-load_path = "res://.godot/imported/DownRightActive.png-4f8c04ab8221a50865465a3d5cbf032f.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_h5wt1"]
-load_path = "res://.godot/imported/UpLeftInactive.png-96c6f9cf288f6f7a000566fecddf6725.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ivptm"]
-load_path = "res://.godot/imported/UpLeftActive.png-f9660507818d756d32fa57c0baa2b646.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ylmi3"]
-load_path = "res://.godot/imported/UpRightInactive.png-bb4f9f02a5402e70f0eca5e4921293fb.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fr3d6"]
-load_path = "res://.godot/imported/UpRightActive.png-ebaadae0a25a9ccd58e9946a20795246.ctex"
+[ext_resource type="Texture2D" uid="uid://cujijo6x8up8o" path="res://Assets/Visuals/ControllerScreen/UpLeftInactive.png" id="9_bd75k"]
+[ext_resource type="Texture2D" uid="uid://c0l2cqgc6uyjq" path="res://Assets/Visuals/ControllerScreen/UpLeftActive.png" id="10_lnfxe"]
+[ext_resource type="Texture2D" uid="uid://dsk0ekvgsoc8j" path="res://Assets/Visuals/ControllerScreen/UpRightInactive.png" id="11_7vvpp"]
+[ext_resource type="Texture2D" uid="uid://c8vmtek0xbusd" path="res://Assets/Visuals/ControllerScreen/UpRightActive.png" id="12_o50tx"]
 
 [node name="caracter_choice" type="Control"]
 layout_mode = 3
@@ -53,7 +34,7 @@ offset_right = 24.0
 offset_bottom = -7.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("CompressedTexture2D_7p7kb")
+texture = ExtResource("1_0swhq")
 expand_mode = 1
 stretch_mode = 5
 
@@ -97,9 +78,9 @@ alignment = 1
 custom_minimum_size = Vector2(350, 350)
 layout_mode = 2
 toggle_mode = true
-texture_normal = SubResource("CompressedTexture2D_2vypp")
-texture_pressed = SubResource("CompressedTexture2D_ngvch")
-texture_hover = SubResource("CompressedTexture2D_ngvch")
+texture_normal = ExtResource("3_ys6rc")
+texture_pressed = ExtResource("4_iatns")
+texture_hover = ExtResource("4_iatns")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -111,9 +92,9 @@ layout_mode = 2
 custom_minimum_size = Vector2(350, 350)
 layout_mode = 2
 toggle_mode = true
-texture_normal = SubResource("CompressedTexture2D_tnaq2")
-texture_pressed = SubResource("CompressedTexture2D_075b1")
-texture_hover = SubResource("CompressedTexture2D_075b1")
+texture_normal = ExtResource("5_x5e73")
+texture_pressed = ExtResource("6_6d2kg")
+texture_hover = ExtResource("6_6d2kg")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -128,7 +109,6 @@ texture_normal = ExtResource("7_dqwpr")
 texture_hover = ExtResource("8_8f7w1")
 ignore_texture_size = true
 stretch_mode = 5
-script = ExtResource("4_86n2h")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer2/HBoxContainer"]
 layout_mode = 2
@@ -138,9 +118,9 @@ alignment = 1
 custom_minimum_size = Vector2(350, 350)
 layout_mode = 2
 toggle_mode = true
-texture_normal = SubResource("CompressedTexture2D_h5wt1")
-texture_pressed = SubResource("CompressedTexture2D_ivptm")
-texture_hover = SubResource("CompressedTexture2D_ivptm")
+texture_normal = ExtResource("9_bd75k")
+texture_pressed = ExtResource("10_lnfxe")
+texture_hover = ExtResource("10_lnfxe")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -152,10 +132,8 @@ layout_mode = 2
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 toggle_mode = true
-texture_normal = SubResource("CompressedTexture2D_ylmi3")
-texture_pressed = SubResource("CompressedTexture2D_fr3d6")
-texture_hover = SubResource("CompressedTexture2D_fr3d6")
+texture_normal = ExtResource("11_7vvpp")
+texture_pressed = ExtResource("12_o50tx")
+texture_hover = ExtResource("12_o50tx")
 ignore_texture_size = true
 stretch_mode = 5
-
-[connection signal="pressed" from="CanvasLayer2/HBoxContainer/VBoxContainer3/TextureButton" to="CanvasLayer2/HBoxContainer/VBoxContainer3/TextureButton" method="_on_pressed"]
