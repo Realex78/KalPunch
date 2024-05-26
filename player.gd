@@ -4,6 +4,7 @@ extends CharacterBody2D
 var jump_speed = -5000
 var jump_acum = 0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+var isattacking= false;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -15,12 +16,13 @@ func _physics_process(delta):
 	velocity.y += gravity * delta
 
 	# Handle Jump.
-	if Input.is_action_pressed("jump") and is_on_floor():
+	if Input.is_action_pressed("jump") and is_on_floor() and isattacking==false:
 		jump_acum += min(delta * jump_speed, -100)
 
-	if Input.is_action_just_released("jump") and is_on_floor():
+	if Input.is_action_just_released("jump") and is_on_floor() and isattacking==false:
 		velocity.y = max(jump_acum, -1001)
 		jump_acum = 0
+		
 	
 	# Get the input direction.
 	var direction = Input.get_axis("move_left", "move_right")
@@ -28,16 +30,21 @@ func _physics_process(delta):
 	
 	$PlayerAnimatedSprite.flip_h = velocity.x < 0
 	if is_on_floor():
-		if velocity.x != 0:
+		if velocity.x != 0 and isattacking==false:
 			$PlayerAnimatedSprite.animation = "walk"
 			$PlayerAnimatedSprite.flip_v = false
+		
+		elif Input.is_action_pressed("punch"):
+			$PlayerAnimatedSprite.animation = "punch"
+			isattacking=true
 		else:
 			$PlayerAnimatedSprite.animation = "idle"
 	else:
-		if velocity.y > 0:
+		if velocity.y > 0 and isattacking==false:
 			$PlayerAnimatedSprite.animation = "falling"
 		else:
 			$PlayerAnimatedSprite.animation = "jump"
+		
 
 	move_and_slide()
 	
