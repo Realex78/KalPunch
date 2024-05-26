@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://dy4calyh6gqg8"]
 
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_42285"]
 [ext_resource type="Texture2D" uid="uid://dt7pfku5vpr61" path="res://Assets/Visuals/TitleScreen/TitleScreenBackdrop.png" id="1_jvlcx"]
-[ext_resource type="Script" path="res://scripts/menu.gd" id="1_kykf2"]
 [ext_resource type="Texture2D" uid="uid://vcd027agg5pf" path="res://Assets/Visuals/TitleScreen/StartButtonActive.png" id="3_6q8n3"]
 [ext_resource type="Texture2D" uid="uid://blvy3lx37kjmq" path="res://Assets/Visuals/TitleScreen/StartButtonInactive.PNG" id="3_fmj5v"]
 [ext_resource type="Texture2D" uid="uid://c2cvbc86d2igy" path="res://Assets/Visuals/TitleScreen/OptionsButtonInactive.PNG" id="5_6mnpk"]
@@ -17,7 +17,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-script = ExtResource("1_kykf2")
+script = ExtResource("1_42285")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(1920, 1080)
