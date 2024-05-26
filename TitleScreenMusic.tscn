@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cp4u66pmnkr10"]
+
+[ext_resource type="AudioStream" uid="uid://b21m2togpmuub" path="res://Assets/Music/TitleScreen.mp3" id="1_2yodq"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_2yodq")
