@@ -1,13 +1,26 @@
-[gd_scene load_steps=6 format=3 uid="uid://ts57xxet2hea"]
+[gd_scene load_steps=6 format=3 uid="uid://meuehunku368"]
 
 [ext_resource type="Script" path="res://volume_slider.gd" id="1_6v770"]
-[ext_resource type="FontFile" uid="uid://bq5l730dea6ek" path="res://Assets/Visuals/TitleScreen/game_over.ttf" id="1_7y4p4"]
-[ext_resource type="AudioStream" uid="uid://b21m2togpmuub" path="res://Assets/Music/TitleScreen.mp3" id="2_1tssy"]
-[ext_resource type="AudioStream" uid="uid://qjtpdi8li4tm" path="res://Assets/Music/TestSFX.mp3" id="3_6r72d"]
+[ext_resource type="FontFile" path="res://Assets/Visuals/TitleScreen/game_over.ttf" id="1_7y4p4"]
+[ext_resource type="Script" path="res://Options.gd" id="1_sb37e"]
+[ext_resource type="AudioStream" uid="uid://btf46ebq5o27r" path="res://Assets/Music/TitleScreen.mp3" id="2_1tssy"]
 [ext_resource type="Texture2D" uid="uid://dt7pfku5vpr61" path="res://Assets/Visuals/TitleScreen/TitleScreenBackdrop.png" id="4_15o2r"]
 
 [node name="Settings" type="Node2D"]
-position = Vector2(50, 100)
+position = Vector2(-32, 63)
+script = ExtResource("1_sb37e")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(1920, 1080)
+offset_left = 32.0
+offset_top = -63.0
+offset_right = 1952.0
+offset_bottom = 1017.0
+mouse_filter = 2
+texture = ExtResource("4_15o2r")
+expand_mode = 1
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
 
 [node name="Label2" type="Label" parent="."]
 offset_left = 100.0
@@ -28,7 +41,9 @@ offset_bottom = 833.0
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_7y4p4")
 theme_override_font_sizes/font_size = 150
-text = "Master control"
+
+text = "Master Control"
+
 
 [node name="Master" type="HSlider" parent="VBoxContainer"]
 layout_mode = 2
@@ -66,18 +81,28 @@ value = 1.0
 script = ExtResource("1_6v770")
 bus_name = "SFX"
 
-[node name="Music" type="AudioStreamPlayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+show_behind_parent = true
+position = Vector2(909, 440)
+scale = Vector2(0.498958, 0.5)
+texture = ExtResource("4_15o2r")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 1668.0
+offset_top = 839.0
+offset_right = 1871.0
+offset_bottom = 960.0
+theme_override_colors/font_color = Color(1, 0, 0.356863, 1)
+theme_override_colors/font_hover_color = Color(0, 1, 0.701961, 1)
+theme_override_fonts/font = ExtResource("1_7y4p4")
+theme_override_font_sizes/font_size = 200
+text = "Menu"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_1tssy")
 autoplay = true
 bus = &"Music"
 
-[node name="SFX" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_6r72d")
-autoplay = true
-bus = &"SFX"
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-show_behind_parent = true
-position = Vector2(915, 449)
-scale = Vector2(0.498958, 0.5)
-texture = ExtResource("4_15o2r")
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
