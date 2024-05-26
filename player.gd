@@ -10,17 +10,11 @@ var last_pressed_jump = true
 var time_since_landing = INF
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var isattacking= false;
-var damaged=0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$PlayerAnimatedSprite.animation = "idle"
 	$PlayerAnimatedSprite.flip_v = false
-
-func _on_PlayerHitRadiusCollision(area):
-	if area.is_in_group("punch"):
-		damaged=damaged+1
-		$PlayerAnimatedSprite.animation="smacked"
 
 
 func _physics_process(delta):
@@ -44,7 +38,6 @@ func _physics_process(delta):
 		velocity.x = 0
 	else:
 		velocity.x = direction * speed
-		
 	
 	# Editar animaciones
 	$PlayerAnimatedSprite.flip_h = velocity.x < 0

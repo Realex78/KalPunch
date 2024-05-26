@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bj0ak8qc2l7ss"]
+[gd_scene load_steps=11 format=3 uid="uid://bj0ak8qc2l7ss"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_6sk4a"]
 [ext_resource type="Texture2D" uid="uid://bmni20nlhnvcf" path="res://stickman_idle.png" id="1_nm30d"]
@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://blpspss5jsr74" path="res://stickman_landing.png" id="5_j56fo"]
 [ext_resource type="Texture2D" uid="uid://vysmfkhmn6t7" path="res://Screenshot 2024-05-26 at 12.27.03.png" id="5_wmjcc"]
 [ext_resource type="Texture2D" uid="uid://cq1pdi868xjc8" path="res://stickman_right.png" id="7_4e75n"]
-[ext_resource type="Texture2D" uid="uid://luf8dsdvvons" path="res://Screenshot 2024-05-26 at 14.17.16.png" id="7_yek5s"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2nlfe"]
 radius = 600.0
@@ -59,14 +58,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("7_yek5s")
-}],
-"loop": true,
-"name": &"smacked",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": ExtResource("7_4e75n")
 }],
 "loop": true,
@@ -89,4 +80,4 @@ shape = SubResource("RectangleShape2D_0ajgd")
 
 [node name="PlayerAnimatedSprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_10cyx")
-animation = &"smacked"
+animation = &"punch"
