@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b3b3yq58w16a8"
-path="res://.godot/imported/Supplex.png-b03841f4b6e0969957f9af204791e5c3.ctex"
+path="res://.godot/imported/Supplex.png-1c0ed21b59d95ea267e3a89ff5957dde.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Visuals/OldGeezer/Supplex.png"
-dest_files=["res://.godot/imported/Supplex.png-b03841f4b6e0969957f9af204791e5c3.ctex"]
+source_file="res://Assets/Visuals/OldGeezerGreen/Supplex.png"
+dest_files=["res://.godot/imported/Supplex.png-1c0ed21b59d95ea267e3a89ff5957dde.ctex"]
 
 [params]
 

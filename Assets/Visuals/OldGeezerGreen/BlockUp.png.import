@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://8frw8u0hkmst"
-path="res://.godot/imported/BlockUp.png-bc4e68e5d03fcc14aa2031d8bfe1c1c9.ctex"
+path="res://.godot/imported/BlockUp.png-57ef3145028fcdf2c6b2c7bb9b3ea0a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Visuals/OldGeezer/BlockUp.png"
-dest_files=["res://.godot/imported/BlockUp.png-bc4e68e5d03fcc14aa2031d8bfe1c1c9.ctex"]
+source_file="res://Assets/Visuals/OldGeezerGreen/BlockUp.png"
+dest_files=["res://.godot/imported/BlockUp.png-57ef3145028fcdf2c6b2c7bb9b3ea0a6.ctex"]
 
 [params]
 
