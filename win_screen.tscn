@@ -1,10 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://6h4eutwucqpx"]
+[gd_scene load_steps=14 format=3 uid="uid://o3xey3icx5ic"]
 
 [ext_resource type="Texture2D" uid="uid://cdmvt1k2gb2gl" path="res://Assets/Visuals/ControllerScreen/Background.png" id="1_l1m38"]
 [ext_resource type="Script" path="res://win_screen.gd" id="1_r4daw"]
 [ext_resource type="Script" path="res://Dummy_1.gd" id="2_b21hv"]
 [ext_resource type="Script" path="res://Dummy_2.gd" id="3_ak02c"]
-[ext_resource type="FontFile" uid="uid://or3htumpegrb" path="res://Assets/Visuals/TitleScreen/game_over.ttf" id="3_vfobd"]
+[ext_resource type="FontFile" path="res://Assets/Visuals/TitleScreen/game_over.ttf" id="3_vfobd"]
 [ext_resource type="Script" path="res://Dummy_3.gd" id="4_smm3m"]
 [ext_resource type="Script" path="res://Dummy_4.gd" id="5_s5rxs"]
 [ext_resource type="Script" path="res://Leaderboard.gd" id="6_5t75m"]
@@ -103,6 +103,6 @@ theme_override_colors/font_pressed_color = Color(0.984314, 1, 0, 1)
 theme_override_colors/font_hover_color = Color(0.988235, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_vfobd")
 theme_override_font_sizes/font_size = 200
-text = "To title"
+text = "Back"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
