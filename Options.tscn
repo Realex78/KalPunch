@@ -1,9 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://vmkxxevecubf"]
+[gd_scene load_steps=8 format=3 uid="uid://meuehunku368"]
 
 [ext_resource type="Script" path="res://volume_slider.gd" id="1_6v770"]
 [ext_resource type="FontFile" uid="uid://or3htumpegrb" path="res://Assets/Visuals/TitleScreen/game_over.ttf" id="1_7y4p4"]
 [ext_resource type="Script" path="res://Options.gd" id="1_sb37e"]
-[ext_resource type="FontFile" uid="uid://c40ufl6eykqm" path="res://Assets/Visuals/TitleScreen/Supersonic Rocketship.ttf" id="3_3x50x"]
+[ext_resource type="FontFile" path="res://Assets/Visuals/TitleScreen/Supersonic Rocketship.ttf" id="3_3x50x"]
 [ext_resource type="Texture2D" uid="uid://dt7pfku5vpr61" path="res://Assets/Visuals/TitleScreen/TitleScreenBackdrop.png" id="4_15o2r"]
 [ext_resource type="Texture2D" uid="uid://ckn4qrojkkd4u" path="res://Assets/Visuals/PausedScreen/BackButtonInactive.PNG" id="4_ewv1v"]
 [ext_resource type="Texture2D" uid="uid://bf7swckvsw4rk" path="res://Assets/Visuals/PausedScreen/BackButtonActive.PNG" id="5_3ci60"]
