@@ -26,7 +26,7 @@ func stop_music():
 	if music_player.playing:
 		music_player.stop()
 
-var player_1_name="Jugador 1";
+var player_1_name="Jugador 1:";
 var player_1_score=10;
 
 var player_2_name="Jugador 2";
