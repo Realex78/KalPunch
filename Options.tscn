@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://meuehunku368"]
+[gd_scene load_steps=5 format=3 uid="uid://meuehunku368"]
 
 [ext_resource type="Script" path="res://volume_slider.gd" id="1_6v770"]
-[ext_resource type="FontFile" path="res://Assets/Visuals/TitleScreen/game_over.ttf" id="1_7y4p4"]
+[ext_resource type="FontFile" uid="uid://or3htumpegrb" path="res://Assets/Visuals/TitleScreen/game_over.ttf" id="1_7y4p4"]
 [ext_resource type="Script" path="res://Options.gd" id="1_sb37e"]
-[ext_resource type="AudioStream" uid="uid://btf46ebq5o27r" path="res://Assets/Music/TitleScreen.mp3" id="2_1tssy"]
 [ext_resource type="Texture2D" uid="uid://dt7pfku5vpr61" path="res://Assets/Visuals/TitleScreen/TitleScreenBackdrop.png" id="4_15o2r"]
 
 [node name="Settings" type="Node2D"]
@@ -96,10 +95,5 @@ theme_override_colors/font_hover_color = Color(0, 1, 0.701961, 1)
 theme_override_fonts/font = ExtResource("1_7y4p4")
 theme_override_font_sizes/font_size = 200
 text = "Menu"
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_1tssy")
-autoplay = true
-bus = &"Music"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
