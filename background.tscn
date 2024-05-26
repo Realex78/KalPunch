@@ -1,16 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://obnmmeov74"]
+[gd_scene load_steps=5 format=3 uid="uid://obnmmeov74"]
 
 [ext_resource type="Texture2D" uid="uid://bbd4v22eoct1l" path="res://Assets/Visuals/Level/Background.PNG" id="1_f2uuw"]
 [ext_resource type="PackedScene" uid="uid://dq6g5xrbmwlih" path="res://Platform1.tscn" id="2_upe02"]
 [ext_resource type="PackedScene" uid="uid://bvwwstygvhe3n" path="res://platform2.tscn" id="3_hs4um"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cis58"]
+size = Vector2(3859.54, 361.974)
+
 [node name="Background" type="Sprite2D"]
 position = Vector2(963.5, 540.5)
 scale = Vector2(0.498698, 0.495833)
 texture = ExtResource("1_f2uuw")
-
-[node name="StaticBody2D" parent="." instance=ExtResource("2_upe02")]
-position = Vector2(17.0444, 789.58)
 
 [node name="StaticBody2D2" parent="." instance=ExtResource("3_hs4um")]
 position = Vector2(-1196.11, 216.807)
@@ -20,3 +20,8 @@ position = Vector2(1192.1, 200.672)
 
 [node name="StaticBody2D4" parent="." instance=ExtResource("2_upe02")]
 position = Vector2(23.06, -551.597)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(5.01306, 906.029)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_cis58")

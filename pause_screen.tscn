@@ -1,0 +1,87 @@
+[gd_scene load_steps=8 format=3 uid="uid://5ga5kjri5f15"]
+
+[ext_resource type="Texture2D" uid="uid://cdmvt1k2gb2gl" path="res://Assets/Visuals/ControllerScreen/Background.png" id="1_ltg17"]
+[ext_resource type="Texture2D" uid="uid://bjlmmckf3sgc2" path="res://Assets/Visuals/PausedScreen/PausedBanner.PNG" id="2_3bi0u"]
+[ext_resource type="Texture2D" uid="uid://cawla7j86um6j" path="res://Assets/Visuals/TitleScreen/QuitButtonInactive.PNG" id="3_vd5bb"]
+[ext_resource type="Texture2D" uid="uid://ckn4qrojkkd4u" path="res://Assets/Visuals/PausedScreen/BackButtonInactive.PNG" id="4_i0rno"]
+[ext_resource type="Texture2D" uid="uid://dm0ffb821qaue" path="res://Assets/Visuals/TitleScreen/QuitButtonActive.PNG" id="4_ymuhf"]
+[ext_resource type="Texture2D" uid="uid://bf7swckvsw4rk" path="res://Assets/Visuals/PausedScreen/BackButtonActive.PNG" id="5_gis71"]
+[ext_resource type="Script" path="res://scripts/quit_to_title.gd" id="5_xq0xc"]
+
+[node name="PauseScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ltg17")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer2"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -101.0
+offset_right = 400.0
+offset_bottom = 101.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer2/VBoxContainer"]
+custom_minimum_size = Vector2(600, 500)
+layout_mode = 2
+texture = ExtResource("2_3bi0u")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="spacer" type="Control" parent="CanvasLayer2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer2/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="quit" type="TextureButton" parent="CanvasLayer2/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 2
+texture_normal = ExtResource("3_vd5bb")
+texture_hover = ExtResource("4_ymuhf")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("5_xq0xc")
+
+[node name="spacer3" type="Control" parent="CanvasLayer2/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+
+[node name="back" type="TextureButton" parent="CanvasLayer2/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 2
+texture_normal = ExtResource("4_i0rno")
+texture_hover = ExtResource("5_gis71")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="spacer2" type="Control" parent="CanvasLayer2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[connection signal="pressed" from="CanvasLayer2/VBoxContainer/HBoxContainer/quit" to="CanvasLayer2/VBoxContainer/HBoxContainer/quit" method="_on_pressed"]
