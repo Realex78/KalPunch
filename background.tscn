@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bvwwstygvhe3n" path="res://platform2.tscn" id="3_hs4um"]
 [ext_resource type="PackedScene" uid="uid://bj0ak8qc2l7ss" path="res://Player.tscn" id="4_ltort"]
 [ext_resource type="Script" path="res://player_1.gd" id="5_5brc6"]
-[ext_resource type="PackedScene" path="res://wall.tscn" id="5_udxrj"]
+[ext_resource type="PackedScene" uid="uid://doce7mnl1tmi8" path="res://wall.tscn" id="5_udxrj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0j8rn"]
 size = Vector2(3868.82, 366.513)
@@ -27,10 +27,12 @@ position = Vector2(23.06, -551.597)
 [node name="Player2" parent="." instance=ExtResource("4_ltort")]
 position = Vector2(333.869, 384.202)
 scale = Vector2(1.5, 1.5)
+collision_layer = 2
 
 [node name="Player" parent="." instance=ExtResource("4_ltort")]
 position = Vector2(-347.906, 362.017)
 scale = Vector2(1.5, 1.5)
+collision_layer = 2
 script = ExtResource("5_5brc6")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
