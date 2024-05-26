@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bew3cyd4f4mu0" path="res://stickman_falling.png" id="2_y71oc"]
 [ext_resource type="Texture2D" uid="uid://c85kpv1slfuyl" path="res://stickman_jump.png" id="3_wxkg2"]
 [ext_resource type="Texture2D" uid="uid://vysmfkhmn6t7" path="res://Screenshot 2024-05-26 at 12.27.03.png" id="5_wmjcc"]
+[ext_resource type="Texture2D" uid="uid://blpspss5jsr74" path="res://stickman_landing.png" id="5_j56fo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2nlfe"]
 radius = 600.0
@@ -45,6 +46,10 @@ animations = [{
 }],
 "loop": true,
 "name": &"punch",
+"texture": ExtResource("5_j56fo")
+}],
+"loop": true,
+"name": &"landing",
 "speed": 5.0
 }, {
 "frames": [{
