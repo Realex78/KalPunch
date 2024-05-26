@@ -4,7 +4,7 @@ extends CharacterBody2D
 var jump_speed = -5000
 var jump_acum = 0
 var last_velocity_y = 0
-var PLAYER_ID = 1
+var PLAYER_ID = 0
 var last_pressed_jump = true
 # Time since landing initialized to inifity for comparison purposes
 var time_since_landing = INF
