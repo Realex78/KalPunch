@@ -3,6 +3,9 @@ extends CharacterBody2D
 @export var speed = 400 # How fast the player will move (pixels/sec).
 var jump_speed = -5000
 var jump_acum = 0
+var last_velocity_y = 0
+# Time since landing initialized to inifity for comparison purposes
+var time_since_landing = INF
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 # Called when the node enters the scene tree for the first time.
@@ -31,7 +34,12 @@ func _physics_process(delta):
 	# Editar animaciones
 	$PlayerAnimatedSprite.flip_h = velocity.x < 0
 	if is_on_floor():
-		if velocity.x != 0:
+		if last_velocity_y > velocity.y:
+			$PlayerAnimatedSprite.animation = "landing"
+			time_since_landing = 0
+		elif time_since_landing < 0.25:
+			time_since_landing += delta
+		elif velocity.x != 0:
 			$PlayerAnimatedSprite.animation = "walk"
 		else:
 			$PlayerAnimatedSprite.animation = "idle"
@@ -40,6 +48,8 @@ func _physics_process(delta):
 			$PlayerAnimatedSprite.animation = "falling"
 		else:
 			$PlayerAnimatedSprite.animation = "jump"
+
+	last_velocity_y = velocity.y
 
 	move_and_slide()
 	
