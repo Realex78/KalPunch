@@ -17,6 +17,11 @@ func _ready():
 	$PlayerAnimatedSprite.animation = "idle"
 	$PlayerAnimatedSprite.flip_v = false
 
+func _on_PlayerHitRadiusCollision(area):
+	if area.is_in_group("player"):
+		damaged=damaged+1
+		$PlayerAnimatedSprite.animation="smacked"
+
 
 func _physics_process(delta):
 	# Puro input alv
@@ -39,6 +44,7 @@ func _physics_process(delta):
 		velocity.x = 0
 	else:
 		velocity.x = direction * speed
+		
 	
 	# Editar animaciones
 	$PlayerAnimatedSprite.flip_h = velocity.x < 0
@@ -53,7 +59,7 @@ func _physics_process(delta):
 		elif time_since_landing < 0.25:
 			time_since_landing += delta
 		elif velocity.x != 0 and isattacking==false:
-			$PlayerAnimatedSprite.play("walk")
+			$PlayerAnimatedSprite.animation = "walk"
 		else:
 			$PlayerAnimatedSprite.animation = "idle"
 	else:
@@ -68,8 +74,45 @@ func _physics_process(delta):
 
 	move_and_slide()
 	
-func _on_player_hit_radis_area_entered(area):
-	if area.is_in_group("Player"):
-		damaged=damaged+1
-		$PlayerAnimatedSprite.animation="smack"
-	pass # Replace with function body.
+	#
+	#if !is_on_floor():
+		#velocity.y += gravity
+		#if velocity.y > 100:
+			#velocity.y = 100
+	#
+	#if Input.is_action_pressed("move_right"):
+		#velocity.x += 1
+	#if Input.is_action_pressed("move_left"):
+		#velocity.x -= 1
+	#
+	#if velocity.length() > 0:
+		#velocity = velocity.normalized() * speed
+		#if velocity.x != 0:
+			#$PlayerAnimatedSprite.animation = "walk"
+			#$PlayerAnimatedSprite.flip_v = false
+			## See the note below about boolean assignment.
+			#$PlayerAnimatedSprite.flip_h = velocity.x < 0
+	#else:
+		#$PlayerAnimatedSprite.animation = "idle"
+	#
+	#move_and_slide()
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+	#var velocity = Vector2.ZERO # The player's movement vector.
+	#
+#
+	#if velocity.length() > 0:
+		#velocity = velocity.normalized() * speed
+		#if velocity.x != 0:
+			#$PlayerAnimatedSprite.animation = "walk"
+			#$PlayerAnimatedSprite.flip_v = false
+			## See the note below about boolean assignment.
+			#$PlayerAnimatedSprite.flip_h = velocity.x < 0
+	#else:
+		#$PlayerAnimatedSprite.animation = "idle"
+		#
+	#position += velocity * delta
+	#position = position.clamp(Vector2.ZERO, screen_size)
+	

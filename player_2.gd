@@ -68,7 +68,9 @@ func _physics_process(delta):
 
 	move_and_slide()
 	
-func _on_PlayerHitRadiusCollision(area):
+
+func _on_player_hit_radis_area_entered(area):
 	if area.is_in_group("Player"):
 		damaged=damaged+1
 		$PlayerAnimatedSprite.animation="smack"
+	pass # Replace with function body.
