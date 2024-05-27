@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://obnmmeov74"]
+[gd_scene load_steps=7 format=3 uid="uid://obnmmeov74"]
 
 [ext_resource type="Texture2D" uid="uid://bbd4v22eoct1l" path="res://Assets/Visuals/Level/Background.PNG" id="1_f2uuw"]
 [ext_resource type="PackedScene" uid="uid://dq6g5xrbmwlih" path="res://Platform1.tscn" id="2_upe02"]
 [ext_resource type="PackedScene" uid="uid://bvwwstygvhe3n" path="res://platform2.tscn" id="3_hs4um"]
+[ext_resource type="PackedScene" uid="uid://bj0ak8qc2l7ss" path="res://Player.tscn" id="4_ltort"]
+[ext_resource type="Script" path="res://player_1.gd" id="5_5brc6"]
+[ext_resource type="Script" path="res://player_2.gd" id="6_qgjph"]
 
 [node name="Background" type="Sprite2D"]
 position = Vector2(963.5, 540.5)
@@ -20,3 +23,13 @@ position = Vector2(1192.1, 200.672)
 
 [node name="StaticBody2D4" parent="." instance=ExtResource("2_upe02")]
 position = Vector2(23.06, -551.597)
+
+[node name="Player" parent="." instance=ExtResource("4_ltort")]
+position = Vector2(-396.031, 428.572)
+scale = Vector2(1.5, 1.5)
+script = ExtResource("5_5brc6")
+
+[node name="Player2" parent="." instance=ExtResource("4_ltort")]
+position = Vector2(365.953, 430.588)
+scale = Vector2(1.5, 1.5)
+script = ExtResource("6_qgjph")
